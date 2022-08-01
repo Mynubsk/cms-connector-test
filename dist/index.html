@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Maps Block</title>
-	</head>
-	<body>
-		<article class="slds-card">
-  <div class="slds-card__header slds-grid">
+<html lang="en">
+<head>
+<title>test api</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+<article class="slds-card">
+    
+    <script>
+    $.getJSON('https://62e4133ac6b56b45118193ca.mockapi.io/assets', function(data) {
+	var test = ""
+for (let i = 0; i < 5; i++){
+        //var text = `Date: ${data[i].avatar}<br>`
+		url = `${data[i].avatar}`
+		l = url.split('/', -1)[6]
+		l = l.split('.',-1)[0]
+		console.log(l)
+		 test = test + (`<img id = "${l}" src = ${data[i].avatar}>
+					Name: ${data[i].name}
+					ID: ${l}<br>`)
+                    //Time: ${data.time}<br>
+                    //Unix time: ${data.milliseconds_since_epoch}`
+
+}
+        $(".mypanel").html(test);
+			
+			
+    });
+	
+
+	
+    </script>
+	
+	 <div class="slds-card__header slds-grid">
     <header class="slds-media slds-media_center slds-has-flexi-truncate">
       <div class="slds-media__figure">
         <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed">
@@ -22,68 +50,19 @@
         </h2>
       </div>
     </header>
+	
   </div>
-  <div class="slds-card__body slds-card__body_inner">
+  
+
+	
+	
+	
+	<div class="slds-card__body slds-card__body_inner">
   <div id="workspace">
   
    
   
-  
-  
-  <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-<tbody>
-<tr>
-<td>
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; border-radius: 0; width: 500px;" width="500">
-<tbody>
-<tr>
-<td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="25%">
-<table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-<tr>
-<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;padding-top:5px;padding-bottom:5px;">
-<div align="center" class="alignment" style="line-height:10px"><img id="img1" src="https://img.freepik.com/free-vector/men-style-fashion-male-clothes-elegant-apparel-stylish-accessories-handsome-man-wearing-luxury-jacket-bearded-macho-fixing-tie_335657-3602.jpg" style="display: block; height: auto; border: 0; width: 125px; max-width: 100%;" width="125"/></div>
-</td>
-</tr>
-</table>
-</td>
-<td class="column column-2" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="25%">
-<table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-<tr>
-<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;padding-top:5px;padding-bottom:5px;">
-<div align="center" class="alignment" style="line-height:10px"><img id="img2" src="https://img.freepik.com/free-vector/happy-girl-swinging-swing-park-flat-vector-illustration-cheerful-female-character-with-closed-eyes-good-mood-enjoying-adult-life-having-fun-relaxing-leisure-lifestyle-concept_74855-23075.jpg" style="display: block; height: auto; border: 0; width: 125px; max-width: 100%;" width="125"/></div>
-</td>
-</tr>
-</table>
-</td>
-<td class="column column-3" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="25%">
-<table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-<tr>
-<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;padding-top:5px;padding-bottom:5px;">
-<div align="center" class="alignment" style="line-height:10px"><img id = "img3"  src="https://img.freepik.com/free-vector/man-shows-gesture-great-idea_10045-637.jpg" style="display: block; height: auto; border: 0; width: 125px; max-width: 100%;" width="125"/></div>
-</td>
-</tr>
-</table>
-</td>
-<td class="column column-4" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="25%">
-<table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-<tr>
-<td class="pad" style="width:100%;padding-right:0px;padding-left:0px;padding-top:5px;padding-bottom:5px;">
-<div align="center" class="alignment" style="line-height:10px"><img id = "img4" src="https://img.freepik.com/free-vector/happy-woman-looking-herself-mirror_74855-7520.jpg" style="display: block; height: auto; border: 0; width: 125px; max-width: 100%;" width="125"/></div>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-  
-  
-  
-  
+   <div class="mypanel"></div>
   
   
   
@@ -156,4 +135,5 @@
 		
 		<script src="./main.js"></script>
 	</body>
+
 </html>
