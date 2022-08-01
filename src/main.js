@@ -19,6 +19,10 @@ function debounce (func, wait, immediate) {
 		if (callNow) func.apply(context, args);
 	};
 }
+function imgcall(){
+
+	
+}
 
 function paintSettings () {
 	document.getElementById('img1').src = imgURL0;
@@ -47,8 +51,10 @@ function paintMap() {
 	if (!address) {
 		return;
 	}
-	var url = imgURL0+'?w='+width;
-	sdk.setContent('<img src="' + url + '" />');
+	var url = imgURL0;
+	
+	sdk.setContent('<img src="' + url + '" width=" ' + width + ' height=" ' + width + ' />');
+	
 	sdk.setData({
 		address: address,
 		width: width,
@@ -71,6 +77,7 @@ sdk.getData(function (data) {
 	paintSettings();
 	paintSliderValues();
 	paintMap();
+	imgcall();
 });
 
 document.getElementById('workspace').addEventListener("input", function () {
