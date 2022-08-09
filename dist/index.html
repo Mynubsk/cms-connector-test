@@ -7,6 +7,15 @@
 
 <body>
 <article class="slds-card">
+	
+	<script>
+$(document).ready(function(){
+  $("img").click(function(){
+   var id = $(this).attr('id');
+      $("#text-input-id-1").val(id);    
+  });
+});
+         </script>
     
     <script>
     $.getJSON('https://62e4133ac6b56b45118193ca.mockapi.io/assets', function(data) {
